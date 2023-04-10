@@ -1,20 +1,18 @@
-let cerrar = document.querySelector(".close");
-let abrir = document.querySelector(".cta");
-let modal = document.querySelector(".modal");
-let ventana = document.querySelector(".ventana");
+let quote  = document.getElementById("quote");
+let author = document.getElementById("author");
+let btn    = document.getElementById("btn");
 
+const url ="https://api.quotable.io/random";
 
-abrir.addEventListener("click", function (e) {
-    console.log("Hola");
-    ventana.style.display = "flex";
-    // e.preventDefault();
-    cerrar.style.opacity = "1";
-    cerrar.style.visibility = "visible";
+let getQuote = () => {
+fetch(url)
+.then((data)  =>data.json())
+.then((item) => {
+    quote.innerText = item.content;
+    author.ineerText = item.author;
 });
+};
 
-cerrar.addEventListener("click", function (e) {
-    cerrar.style.opacity = "0";
-    cerrar.style.visibility = "hidden";
-    ventana.style.display= "none";
-    console.log("ceaw");
-})
+window.addEventListener("load",getQuote);
+btn.addEventListener("click", getQuote);
+

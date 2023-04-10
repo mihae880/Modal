@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Modal</title>
+    <title>Random Quote Generador</title>
+    <!--Google Font -->
+    <link href="http://fonts.googleapis.com/css2? family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <!--Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <section class="principal">
-        <h1>Modal</h1>
-        <div class="modal-content">
-            <span class="close">X</span>
-            <a href="#" class="cta">Abrir Modal</a>
-            <img src="Ansiedade.jpg" class="imagen" alt="imagen">
+    <div class="wrapper">
+        <div class="container">
+            <p id="quote">
+                El único modo de hacer un gran trabajo es amar lo que haces.
+                Cuanto más nos ilusiona un proyecto, mayores son las probabilidades de que el resultado sea excelente.
+            </p>
+            <h3 id="author">"Steve Jobs"</h3>
+            <button id="btn">Get Quote</button>
         </div>
-        <div class="ventana">
-            <h2>Este es un modal</h2>
-        </div>
-    </section>
+    </div>
+    <!--Script -->
     <script src="main.js"></script>
 </body>
 
